@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Game Result</h1>
+    <p>{{ player1.name }} (Rating: {{ player1.rating }}) vs {{ player2.name }} (Rating: {{ player2.rating }})</p>
+    {% if winner %}
+        <h2>Winner: {{ winner.name }}</h2>
+    {% else %}
+        <h2>It's a tie!</h2>
+    {% endif %}
+    <a href="{{ url_for('main.index') }}">
+        <button type="button">Play Again</button>
+    </a>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
