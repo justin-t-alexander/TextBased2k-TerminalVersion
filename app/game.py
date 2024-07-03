@@ -3,7 +3,8 @@ class Player:
         self.name = name
         self.rating = rating
 
-# Example players
+
+        
 player1 = Player("Player 1", 80)
 player2 = Player("Player 2", 85)
 player3 = Player("Player 3", 75)
@@ -59,5 +60,5 @@ if __name__ == "__main__":
         print(f"{winner.name} wins!")
     else:
         print("It's a tie!")
-comm
+
 
